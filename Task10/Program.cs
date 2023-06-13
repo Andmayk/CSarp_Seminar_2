@@ -5,6 +5,7 @@
 
 Console.Write("Введите трехзначное число: "); 
 int Number = Convert.ToInt32(Console.ReadLine()); // чтение строки и перевод в целое число 
+Number = Math.Abs(Number); // вдруг ввели отрицательное число
 
 // проверим, что число трёхзначное
 if (99 < Number &&  Number < 1000)
