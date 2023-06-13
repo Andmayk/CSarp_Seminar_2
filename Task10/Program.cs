@@ -6,14 +6,13 @@
 Console.Write("Введите трехзначное число: "); 
 int Number = Convert.ToInt32(Console.ReadLine()); // чтение строки и перевод в целое число 
 
-// проверим что число трёхзначное
+// проверим, что число трёхзначное
 if (99 < Number &&  Number < 1000)
     {
-        Number = Number%10 - Number%100*10;    
-        
-        Console.WriteLine("Number");
+        Number = Number/10 - Number/100*10;    //целочисленно делим на 10 и вычитаем сотни переведенные в десятки
+        Console.WriteLine($"Вторая цифра {Number}");
     }
 else
     {
-        Console.WriteLine($"Введенное число {Number} не трёхзначное");
+        Console.WriteLine($"Введенное число {Number} - не трёхзначное");
     }
