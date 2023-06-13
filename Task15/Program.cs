@@ -3,20 +3,18 @@
 // 7 -> да
 // 1 -> нет
 
-
 Console.Write("Введите номер дня недели: "); 
-byte DayNumber = Convert.ToByte(Console.ReadLine()); // чтение строки и перевод в целое число 
-Number = Math.Abs(Number); // вдруг ввели отрицательное число
-    
-if (DayNumber < 6)
+byte DayNumber = Convert.ToByte(Console.ReadLine()); // чтение строки и перевод в число типа байт "нам хватит"
+// проверим что день от 1 до 5 будни если бы не вероятность введения 0 обощлись бы одинарными условиями без &&
+if (0 < DayNumber && DayNumber < 6)
 {
-    Console.WriteLine($"{NumberDay} -> нет, будни");    
+    Console.WriteLine($"{DayNumber} -> нет, будни");    
 }
-else if (DayNumber < 8)
+else if (5 < DayNumber && DayNumber < 8)  // если день от 6 до 7 выходной  
 {
-    Console.WriteLine($"{NumberDay} -> да! выходной");    
+    Console.WriteLine($"{DayNumber} -> да! выходной");    
 }
-else
+else     // остальное не день недели
 {
-    Console.WriteLine($"{NumberDay} -> не день недели");    
+    Console.WriteLine($"{DayNumber} -> не день недели");    
 }
